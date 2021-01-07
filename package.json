@@ -7,15 +7,22 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "react": "^17.0.1",
+    "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.1",
+    "react-relay": "^10.1.2",
     "react-scripts": "4.0.1",
+    "relay-compiler": "^10.1.2",
+    "relay-runtime": "^10.1.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "start-bak": "react-scripts start",
+    "build": "react-app-rewired build",
+    "build-bak": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "relay": "relay-compiler --src ./src --schema ./src/schema.graphql"
   },
   "eslintConfig": {
     "extends": [
@@ -37,9 +44,12 @@
   },
   "devDependencies": {
     "apollo-client-preset": "^1.0.8",
+    "babel-plugin-relay": "^10.1.2",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
     "react-apollo": "^3.1.5",
+    "relay-compiler": "^10.1.2",
+    "relay-config": "^10.1.2",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1"
   }
